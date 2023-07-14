@@ -101,7 +101,7 @@ if(!$result) {
       <div class="port-box">
       <?php 
     while($row = mysqli_fetch_assoc($result)) {
-      echo '<a href=prog_page.php?prog_id=' . $row["prog_id"] . '>';
+      echo '<a href=prog_page.php?prog_id=' . $row["prog_id"] . ' class="github">';
         echo '<div class="conteneur-miniature-box">';
         $url = $row["prog_url"];
         $img = $row["prog_img"];
