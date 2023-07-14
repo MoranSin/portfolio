@@ -279,7 +279,7 @@ html, body{
     align-items: center;
   }
 
-  .port-box a{
+  .github{
     text-decoration:none;
     padding-top:10px;
     transition:0.4s;

@@ -101,15 +101,16 @@ if(!$result) {
       <div class="port-box">
       <?php 
     while($row = mysqli_fetch_assoc($result)) {
+      echo '<a href=prog_page.php?prog_id=' . $row["prog_id"] . '>';
         echo '<div class="conteneur-miniature-box">';
         $url = $row["prog_url"];
         $img = $row["prog_img"];
         echo '<h3>'.$row["prog_name"].'</h3>';
         echo '<img class="miniature-portfolio" src="'.$img.'">';
         echo'
-        <a href="'.$url.'">Github</a></div>';
-    }
-
+        </div></a>';
+      }
+      
                 ?>
 </div></div></div>
         <div class="clear"></div>
@@ -129,5 +130,8 @@ if(!$result) {
         </div>
       </div>
     </div>
+    <?php mysqli_free_result($result);?>
 </body>
 </html>
+
+<?php mysqli_close($connection); ?>
